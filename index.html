@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-portfolio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -20,7 +20,6 @@
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
             <a href="#services">Projects</a>
-            <!-- <a href="#contact">Contact</a> -->
         </nav>
     </header>
 
@@ -39,7 +38,7 @@
 
             <div class="btn-group">
                 <!-- <a href="#" class="btn">Hire</a> -->
-                <a href="mailto:payneparihar13@gmail.com" class="btn" target="_blank"><i class="fa-solid fa-envelope"></i> Mail</a>
+                <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
             <div class="home-img">
@@ -90,46 +89,37 @@
 
     <section class="services" id="services">
         <h2 class="heading">Projects</h2>
-        <div class="coming-soon">
-            <p>Coming Soon...</p>
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Forest</h4>
+                    <p>
+                        Forest Marketplace connects buyers and sellers with easy product listings featuring images, categories, and prices. Buyers can filter by category, price, and rating. The platform includes a simulated secure checkout, personalized profiles for managing orders and products, detailed product pages with reviews, and a fully responsive design for all devices.
+                    </p>
+                    <a href="https://forest-gamma-one.vercel.app/" target="_blank" class="btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Language Translator</h4>
+                    <p>
+                     A ReactJS-based Translator app that uses the Microsoft Translator API to convert text between languages. It features text input, language selection, reverse translation, and input clearing, all within a clean, responsive interface.
+                    </p>
+                    <a href="https://github.com/makeprodigy/language-translator-app" target="_blank" class="btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>To-Do List</h4>
+                    <p>
+                        A responsive To-Do app built with React that lets users add, edit, delete, and complete tasks. It showcases React components, useState for state management, and clean, intuitive UI for efficient task handling.
+                    </p>
+                    <a href="https://to-do-react-app-beta.vercel.app/" target="_blank" class="btn">View Project</a>
+                </div>
+            </div>
         </div>
-        <!-- <div class="services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Development</h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur explicabo est excepturi numquam alias labore repellat consequuntur neque architecto tenetur, beatae, suscipit in laboriosam obcaecati debitis saepe id necessitatibus.
-                    </p>
-                </div>
-            </div>
-        
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Development</h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur explicabo est excepturi numquam alias labore repellat consequuntur neque architecto tenetur, beatae, suscipit in laboriosam obcaecati debitis saepe id necessitatibus.
-                    </p>
-                </div>
-            </div>
-        
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Development</h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur explicabo est excepturi numquam alias labore repellat consequuntur neque architecto tenetur, beatae, suscipit in laboriosam obcaecati debitis saepe id necessitatibus.
-                    </p>
-                </div>
-            </div>
-        
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Development</h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur explicabo est excepturi numquam alias labore repellat consequuntur neque architecto tenetur, beatae, suscipit in laboriosam obcaecati debitis saepe id necessitatibus.
-                    </p>
-                </div>
-            </div>
-        </div> -->
     </section>
 
     <!-- <section class="contact" id="contact">
@@ -168,20 +158,20 @@
                 <a href="#">FAQ</a>
             </li> -->
             <li>
-                <a href="#services">Projects</a>
+                <a href="#services">Services</a>
             </li>
             <li>
                 <a href="#">About Me</a>
             </li>
             <li>
-                <a href="mailto:payneparihar13@gmail.com" target="_blank">Mail</a>
+                <a href="#">Contact</a>
             </li>
         </ul>
-        <!-- <p class="copyright">
+        <p class="copyright">
             &copy; P Squares | All Rights Reserved
-        </p> -->
+        </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js-portfolio.js"></script>
 </body>
 </html>
