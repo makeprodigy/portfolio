@@ -643,37 +643,60 @@ span{
         padding: 8px 16px;
     }
 }
-.service-box:nth-child(1) {
+.forest {
     background: linear-gradient(135deg, #9df59d, #024102); /* Green to dark green gradient */
     border: 2px solid;
     border-image: linear-gradient(135deg, #228B22, #006400) 1; /* Gradient border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
-.service-box:nth-child(1) h4 {
+
+.forest h4 {
     color: #024102;
 }
-.service-box:nth-child(1) .btn {
+
+.forest .btn {
     background-color: rgb(15, 152, 11);
     box-shadow: 0 0 25px rgb(49, 192, 44); /* Green glow */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-box:nth-child(1) .btn:hover {
+.forest .btn:hover {
     background-color: #ffffff;
     box-shadow: 0 0 50px rgb(15, 152, 11); /* Enhanced green glow on hover */
     color: green;
 }
-.service-box:nth-child(3) {
-    background: linear-gradient(135deg, #add8e6, #00008b); 
+
+.document-management-portal {
+    background: linear-gradient(135deg, #add8e6, #00008b); /* Light blue to navy gradient */
     border: 2px solid;
-    border-image: linear-gradient(135deg, #87ceeb, #00008b) 1; 
+    border-image: linear-gradient(135deg, #87ceeb, #00008b) 1; /* Gradient border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-box:nth-child(3):hover {
+.language-translator {
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-translator:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.to-do-list {
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.to-do-list:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
