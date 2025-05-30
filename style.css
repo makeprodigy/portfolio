@@ -668,22 +668,22 @@ span{
     .services-container {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
     }
     .service-box {
-        width: 95%;
-        max-width: 500px;
-        padding: 18px 12px;
+        width: 98%;
+        max-width: 650px;
+        padding: 28px 22px;
     }
     .service-info h4 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
     .service-info p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
     .service-info .btn {
-        font-size: 1.2rem;
-        padding: 7px 14px;
+        font-size: 1.5rem;
+        padding: 12px 28px;
     }
 }
 @media (max-width: 768px) {
