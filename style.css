@@ -106,25 +106,25 @@ body {
     margin-left: 4rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    border-bottom: 3px solid transparent;
     position: relative;
-    overflow: hidden;
+    padding-bottom: 0.5rem;
 }
 
 .navbar a::before {
     content: '';
     position: absolute;
     bottom: 0;
-    left: -100%;
-    width: 100%;
+    left: 50%;
+    width: 0;
     height: 3px;
     background: var(--holographic-gradient);
-    transition: left 0.3s ease;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .navbar a:hover::before,
 .navbar a.active::before {
-    left: 0;
+    width: 100%;
 }
 
 .navbar a:hover,
@@ -568,82 +568,35 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     color: lightblue;
 }
-.text-animation{
-    font-size: 34px;
+/* Holographic Name Effect */
+.holographic-name {
+    background: var(--holographic-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: holographicShimmer 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 0 0 30px rgba(108, 92, 231, 0.6);
+}
+
+/* Fullstack Developer Title */
+.fullstack-title {
+    font-size: 3.5rem;
     font-weight: 600;
-    min-width: 280px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
-.text-animation span{
-    display: inline-block;
-    position: relative;
-}
-.text-animation span::before{
-    content: "Web Developer";
-    white-space: nowrap;
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-.text-animation span::after{
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-@keyframes cursor{
-    to{
-        border-left: 2px solid var(--main-color);
-    }
-}
-@keyframes words{
-    0%,
-    20%{
-        content: "Frontend Developer";
-    }
-    21%,
-    40%{
-        content: "Web Designer";
-    }
-    41%,
-    60%{
-        content: "UI / UX Designer";
-    }
-    61%,
-    80%{
-        content: "Web Developer";
-    }
-    81%,
-    100%{
-        content: "Software Tester";
-    }
-}
-@keyframes typing{
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }
+
+.holographic-title {
+    background: var(--holographic-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: holographicShimmer 3s ease-in-out infinite;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
 }
 .education{
     padding: 100px 15px;
@@ -1901,6 +1854,13 @@ span{
 }
 
 /* Project-specific color schemes */
+.stayfinder h4 {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .nextjs-dashboard h4 {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-clip: text;
@@ -1923,13 +1883,23 @@ span{
 }
 
 .to-do-list h4 {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Project-specific container themes */
+.stayfinder {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 167, 38, 0.15) 100%);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.stayfinder:hover {
+    border-color: rgba(255, 107, 107, 0.6);
+    box-shadow: 0 20px 60px rgba(255, 107, 107, 0.4);
+}
+
 .nextjs-dashboard {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
     border: 1px solid rgba(102, 126, 234, 0.3);
@@ -1961,16 +1931,34 @@ span{
 }
 
 .to-do-list {
-    background: linear-gradient(135deg, rgba(250, 112, 154, 0.15) 0%, rgba(254, 225, 64, 0.15) 100%);
-    border: 1px solid rgba(250, 112, 154, 0.3);
+    background: linear-gradient(135deg, rgba(45, 52, 73, 0.2) 0%, rgba(116, 185, 255, 0.1) 100%);
+    border: 1px solid rgba(116, 185, 255, 0.3);
 }
 
 .to-do-list:hover {
-    border-color: rgba(250, 112, 154, 0.6);
-    box-shadow: 0 20px 60px rgba(250, 112, 154, 0.4);
+    border-color: rgba(116, 185, 255, 0.6);
+    box-shadow: 0 20px 60px rgba(9, 132, 227, 0.4);
 }
 
 /* Project-specific button styles */
+.stayfinder .btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+    box-shadow: 
+        inset 3px 0 8px rgba(0, 0, 0, 0.3),
+        inset 0 3px 8px rgba(0, 0, 0, 0.3),
+        0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.stayfinder .btn:hover {
+    box-shadow: 
+        inset 3px 0 8px rgba(0, 0, 0, 0.2),
+        inset 0 3px 8px rgba(0, 0, 0, 0.2),
+        0 15px 40px rgba(255, 107, 107, 0.6),
+        -3px 0 12px rgba(255, 107, 107, 0.4),
+        0 -3px 12px rgba(255, 107, 107, 0.4);
+    transform: scale(1.05) translateY(-2px);
+}
+
 .nextjs-dashboard .btn {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     box-shadow: 
@@ -2026,19 +2014,19 @@ span{
 }
 
 .to-do-list .btn {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
     box-shadow: 
         inset 3px 0 8px rgba(0, 0, 0, 0.3),
         inset 0 3px 8px rgba(0, 0, 0, 0.3),
-        0 8px 25px rgba(250, 112, 154, 0.4);
+        0 8px 25px rgba(116, 185, 255, 0.4);
 }
 
 .to-do-list .btn:hover {
     box-shadow: 
         inset 3px 0 8px rgba(0, 0, 0, 0.2),
         inset 0 3px 8px rgba(0, 0, 0, 0.2),
-        0 15px 40px rgba(250, 112, 154, 0.6),
-        -3px 0 12px rgba(250, 112, 154, 0.4),
-        0 -3px 12px rgba(250, 112, 154, 0.4);
+        0 15px 40px rgba(9, 132, 227, 0.6),
+        -3px 0 12px rgba(116, 185, 255, 0.4),
+        0 -3px 12px rgba(116, 185, 255, 0.4);
     transform: scale(1.05) translateY(-2px);
 }
