@@ -1114,42 +1114,48 @@ span{
     }
 
     .skills .heading {
-        font-size: 4.5rem;
-        margin-bottom: 3rem;
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .skills-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.2rem;
     }
 
     .skill-category {
-        padding: 2.5rem 1.5rem;
+        padding: 1.5rem 1.2rem;
     }
 
     .category-header h3 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .category-header i {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 1.3rem;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
     }
 
     .skill-item {
-        padding: 2rem 1.2rem;
+        padding: 1.2rem 0.8rem;
     }
 
-    .skill-item i {
-        font-size: 3rem;
+    .skill-item i,
+    .skill-item svg {
+        font-size: 2rem;
+    }
+
+    .skill-item svg {
+        width: 2rem;
+        height: 2rem;
     }
 
     .skill-item span {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     /* Social buttons responsive */
@@ -1364,50 +1370,60 @@ span{
     }
 
     /* Skills Mobile Responsive */
+    .skills {
+        padding: 4rem 5% 4rem;
+    }
+
     .skills .heading {
-        font-size: 4rem;
-        margin-bottom: 3rem;
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
 
     .skills-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .skill-category {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
     }
 
     .category-header {
-        gap: 1rem;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.8rem;
     }
 
     .category-header h3 {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 
     .category-header i {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        gap: 0.8rem;
     }
 
     .skill-item {
-        padding: 1.8rem 1rem;
+        padding: 1.2rem 0.6rem;
     }
 
-    .skill-item i {
-        font-size: 2.8rem;
+    .skill-item i,
+    .skill-item svg {
+        font-size: 2rem;
+    }
+
+    .skill-item svg {
+        width: 2rem;
+        height: 2rem;
     }
 
     .skill-item span {
-        font-size: 1.2rem;
-        line-height: 1.2;
+        font-size: 1rem;
+        line-height: 1.1;
     }
 
     /* Social buttons mobile responsive */
@@ -1526,8 +1542,8 @@ span{
 /* Skills Section */
 .skills {
     background: linear-gradient(135deg, #16213e 0%, #0f3460 50%, #1a1a2e 100%);
-    min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    min-height: fit-content;
+    padding: 6rem 12% 6rem;
     position: relative;
 }
 
@@ -1543,8 +1559,8 @@ span{
 }
 
 .skills .heading {
-    font-size: 8rem;
-    margin-bottom: 5rem;
+    font-size: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
     background: var(--holographic-gradient);
     background-clip: text;
@@ -1556,16 +1572,16 @@ span{
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .skill-category {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-    border-radius: 2rem;
-    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    padding: 1.8rem 1.5rem;
     border: 2px solid transparent;
     transition: all 0.4s ease-in-out;
     backdrop-filter: blur(20px) saturate(1.3);
@@ -1600,9 +1616,9 @@ span{
 .category-header {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid;
     border-image: var(--holographic-gradient) 2;
     position: relative;
@@ -1610,12 +1626,12 @@ span{
 }
 
 .category-header i {
-    font-size: 2.8rem;
+    font-size: 2rem;
     transition: all 0.3s ease-in-out;
 }
 
 .category-header h3 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     background: var(--holographic-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -1629,8 +1645,8 @@ span{
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
     position: relative;
     z-index: 2;
 }
@@ -1639,10 +1655,10 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2.5rem 1.5rem;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
     background: rgba(255, 255, 255, 0.12);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     border: 1px solid var(--glass-border);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -1676,15 +1692,15 @@ span{
 
 .skill-item i,
 .skill-item svg {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 2;
 }
 
 .skill-item svg {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     fill: currentColor;
 }
 
@@ -1698,11 +1714,11 @@ span{
 }
 
 .skill-item span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-color);
     font-weight: 500;
     text-align: center;
-    line-height: 1.3;
+    line-height: 1.2;
     position: relative;
     z-index: 2;
 }
