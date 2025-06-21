@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <meta name="description" content="Pushpendra Parihar - Passionate Frontend Developer and Web Designer with expertise in JavaScript, React, Next.js, and modern web technologies." />
+    <meta name="keywords" content="Frontend Developer, Web Developer, React Developer, JavaScript, TypeScript, Next.js, UI/UX Designer, Portfolio" />
+    <meta name="author" content="Pushpendra Parihar" />
+    <title>Pushpendra Parihar - Frontend Developer & Web Designer | Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -18,15 +22,17 @@
     <header class="header">
       <a href="#home" class="logo">P <span>Squares</span></a>
 
-      <i class="bx bx-menu" id="menu-icon"></i>
+      <i class="bx bx-menu" id="menu-icon" aria-label="Toggle navigation menu"></i>
 
-      <nav class="navbar">
+              <nav class="navbar" role="navigation" aria-label="Main navigation">
         <a href="#home" class="active">Home</a>
         <a href="#education">Education</a>
-        <a href="#services">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
       </nav>
     </header>
 
+    <main>
     <section class="home" id="home">
       <div class="home-content">
         <h1>Hi, It's <span>Pushpendra</span></h1>
@@ -37,28 +43,50 @@
           contribute value as a proactive team member.
         </p>
 
-        <div class="social-icons">
+                  <div class="social-icons">
           <a
             href="https://www.linkedin.com/in/pushpendra-parihar2025"
             target="_blank"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
+            rel="noopener noreferrer"
+            class="social-btn linkedin-btn"
+            aria-label="Visit Pushpendra's LinkedIn profile"
+            ><i class="bx bxl-linkedin"></i><span>LinkedIn</span></a
+          >
           <a href="https://github.com/makeprodigy" target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
+            rel="noopener noreferrer"
+            class="social-btn github-btn"
+            aria-label="Visit Pushpendra's GitHub profile"
+            ><i class="bx bxl-github"></i><span>GitHub</span></a
+          >
           <!-- <a href="#"><i class='bx bxl-instagram'></i></a>
                 <a href="#"><i class='bx bxl-twitter'></i></a> -->
         </div>
 
         <div class="btn-group">
-          <!-- <a href="#" class="btn">Hire</a> -->
-          <a href="mailto:payneparihar13@gmail.com" class="btn" target="_blank"
-            >Contact</a
-          >
+          <div class="contact-dropdown">
+            <button class="btn contact-btn" id="contactBtn">
+              <i class="fas fa-envelope"></i>Contact Me
+            </button>
+            <div class="contact-dropdown-content" id="contactDropdown">
+              <div class="email-display">
+                <i class="fas fa-envelope"></i>
+                <span class="email-text">payneparihar13@gmail.com</span>
+                <button class="copy-btn" id="copyBtn" title="Copy email">
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+              <div class="dropdown-actions">
+                <a href="mailto:payneparihar13@gmail.com" class="action-btn">
+                  <i class="fas fa-external-link-alt"></i>
+                  Open Mail App
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="home-img">
-        <img src="graphics/my_picture.png" alt="profile picture"
+        <img src="graphics/my_picture.png" alt="profile picture" />
       </div>
     </section>
     <section class="education" id="education">
@@ -97,7 +125,175 @@
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="skills" id="skills">
+      <h2 class="heading">Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-code"></i>
+            <h3>Computer Languages</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-tools"></i>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-react"></i>
+              <span>React.js</span>
+            </div>
+            <div class="skill-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="width: 24px; height: 24px;"><path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"/></svg>
+              <span>Next.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-server"></i>
+              <span>Express.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt" style="color: #06b6d4;"></i>
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-database"></i>
+            <h3>Database & Cloud</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fas fa-leaf" style="color: #47A248;"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-item">
+              <svg width="24px" height="24px" viewBox="0 -17 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                <polygon fill="#ffffff" points="128 0 256 221.705007 0 221.705007"/>
+              </svg>
+              <span>Vercel</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cloud" style="color: #46E3B7;"></i>
+              <span>Render</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-wrench"></i>
+            <h3>Development Tools</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-satellite-dish" style="color: #FF6C37;"></i>
+              <span>Postman</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-book-open" style="color: #F37626;"></i>
+              <span>Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Design Tools</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fab fa-figma"></i>
+              <span>Figma</span>
+            </div>
+            <div class="skill-item">
+              <svg fill="#0055FF" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M200,108H148.12207l57.37109,54.18408A8,8,0,0,1,200,176H136v60a8,8,0,0,1-13.49316,5.81592l-72-68A7.99941,7.99941,0,0,1,48,168V100a8.00008,8.00008,0,0,1,8-8h51.87793L50.50684,37.81592A8,8,0,0,1,56,24H200a8.00008,8.00008,0,0,1,8,8v68A8.00008,8.00008,0,0,1,200,108Z"/>
+              </svg>
+              <span>Framer</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-image"></i>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fas fa-palette"></i>
+              <span>Creativity</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-search"></i>
+              <span>Research</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-comments"></i>
+              <span>Verbal/nonverbal communication</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-plus-circle"></i>
+            <h3>Others</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fas fa-robot"></i>
+              <span>Generative AI</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-share-alt"></i>
+              <span>Social Media</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="projects">
       <h2 class="heading">Projects</h2>
       <div class="services-container">
         <div class="service-box nextjs-dashboard">
@@ -154,23 +350,7 @@
           </div>
         </div>
 
-        <div class="service-box language-translator">
-          <div class="service-info">
-            <h4>Language Translator</h4>
-            <p>
-              A ReactJS-based Translator app that uses the Microsoft Translator
-              API to convert text between languages. It features text input,
-              language selection, reverse translation, and input clearing, all
-              within a clean, responsive interface.
-            </p>
-            <a
-              href="https://language-translator-app-lac.vercel.app/"
-              target="_blank"
-              class="btn"
-              >View Project</a
-            >
-          </div>
-        </div>
+
 
         <div class="service-box to-do-list">
           <div class="service-info">
@@ -191,6 +371,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
@@ -219,9 +400,13 @@
         <a
           href="https://www.linkedin.com/in/pushpendra-parihar2025"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
           ><i class="bx bxl-linkedin"></i
         ></a>
         <a href="https://github.com/makeprodigy" target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
           ><i class="bx bxl-github"></i
         ></a>
         <!-- <a href="#"><i class='bx bxl-instagram'></i></a>
@@ -233,7 +418,7 @@
                 <a href="#">FAQ</a>
             </li> -->
         <li>
-          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
           <a href="#">About Me</a>
